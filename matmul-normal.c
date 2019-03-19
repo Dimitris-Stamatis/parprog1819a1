@@ -38,7 +38,7 @@ int main(){
   }
   getWalltime(&te);
 
-  mflops = (unsigned long)N*N*N*3.0/(te-ts)*1e6;
+  mflops = (unsigned long)N*N*N/((te-ts)*1e6);
   free(a);free(b); free(c);
 
   printf("Mflops/s = %f\n",mflops);
